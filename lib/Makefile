@@ -10,6 +10,8 @@ ifdef CONFIG_TRACE_BRANCH_PROFILING
 CFLAGS_smp_processor_id.o += -DDISABLE_BRANCH_PROFILING
 endif
 
+ccflags-y += -O3 -funroll-loops
+
 # These files are disabled because they produce lots of non-interesting and/or
 # flaky coverage that is not a function of syscall inputs. For example,
 # rbtree can be global and individual rotations don't correlate with inputs.
