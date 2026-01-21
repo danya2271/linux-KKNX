@@ -13,6 +13,9 @@ KCOV_INSTRUMENT := n
 KCSAN_SANITIZE := n
 KCSAN_INSTRUMENT_BARRIERS := y
 
+# Inline optimization
+ccflags-y += -O3 -finline-functions --param max-inline-insns-single=100
+
 ifneq ($(CONFIG_SCHED_OMIT_FRAME_POINTER),y)
 # According to Alan Modra <alan@linuxcare.com.au>, the -fno-omit-frame-pointer is
 # needed for x86 only.  Why this used to be enabled for all architectures is beyond
