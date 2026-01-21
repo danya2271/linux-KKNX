@@ -937,6 +937,7 @@ endif
 endif
 
 KBUILD_CFLAGS	+= -fgraphite-identity -floop-nest-optimize -fno-semantic-interposition -fipa-pta
+KBUILD_CFLAGS	+= --param=inline-unit-growth=145 --param=large-function-growth=450 --param=max-inline-insns-single=1200
 
 # Initialize all stack variables with a 0xAA pattern.
 ifdef CONFIG_INIT_STACK_ALL_PATTERN
