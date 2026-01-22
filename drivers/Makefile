@@ -6,6 +6,8 @@
 # Rewritten to use lists instead of if-statements.
 #
 
+KBUILD_CFLAGS += --param=inline-unit-growth=20 --param=large-function-growth=270 --param=max-inline-insns-single=200 -fno-ipa-pta -fno-loop-nest-optimize
+
 obj-y				+= cache/
 obj-y				+= irqchip/
 obj-y				+= bus/
