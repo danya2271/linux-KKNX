@@ -940,7 +940,6 @@ ifneq ($(cc-name),clang)
 KBUILD_CFLAGS	+= -fgraphite-identity -floop-nest-optimize
 KBUILD_CFLAGS	+= -fipa-pta
 KBUILD_CFLAGS	+= -falign-functions=64:16:11 -falign-loops=32
-KBUILD_CFLAGS	+= -fmodulo-sched -fmodulo-sched-allow-regmoves
 endif
 
 # Initialize all stack variables with a 0xAA pattern.
