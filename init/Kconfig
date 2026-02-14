@@ -1576,6 +1576,15 @@ choice
 	prompt "Compiler optimization level"
 	default CC_OPTIMIZE_FOR_PERFORMANCE
 
+config CC_OPTIMIZE_FOR_MAXIMUM_PERFORMANCE
+	bool "Optimize for maximum performance (-O3 + Polly + LTO)"
+	imply LLVM_POLLY
+	imply LTO_CLANG
+	imply LTO_CLANG_THIN
+	help
+	  This is the best optimization level for performance.
+
+
 config CC_OPTIMIZE_FOR_PERFORMANCE
 	bool "Optimize for performance (-O2)"
 	help
